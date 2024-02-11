@@ -4,22 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
     <title>Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Rubik&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <form>
-        <input type="search" placeholder="Eanter a city..." />
-        <input type="submit" value="Search" />
-      </form>
-    </header>
-    <main>
-      <h1>paris</h1>
-      <p>Sunday 14:00, few clouds Humidity: 85%, Wind: 4.63km/h</p>
-      🌤157°
-    </main>
-    <footer>
-      coded by Fatremeh, is open-sourced on GitHub and hosted on Netlify
-    </footer>
+    <div class="main-color">
+      <header>
+        <form>
+          <input
+            type="search"
+            placeholder="Eanter a city..."
+            required
+            class="search-box"
+          />
+          <input type="submit" value="Search" class="search-button" />
+        </form>
+      </header>
+      <main>
+        <h1><strong>Paris</strong></h1>
+        <p>Sunday 14:00, few clouds </br>   Humidity: <span class="identity">85%</span>, Wind: <span class="identity">4.63km/h</span></p>
+        <div class="tempature"><div class="icon">🌤</div><div class="temp">15</div><div class="degree">°c</div></div>
+      </main>
+      <footer>
+        coded by Fatremeh, is open-sourced on GitHub and hosted on Netlify
+      </footer>
+    </div>
   </body>
 </html>
