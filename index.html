@@ -13,18 +13,19 @@
   <body>
     <div class="main-color">
       <header>
-        <form>
+        <form id="form">
           <input
             type="search"
-            placeholder="Eanter a city..."
+            placeholder="Enter a city..."
             required
             class="search-box"
+            id="search-input";
           />
           <input type="submit" value="Search" class="search-button" />
         </form>
       </header>
       <main>
-        <h1><strong>Paris</strong></h1>
+        <h1 id="fianal-city"><strong>Paris</strong></h1>
         <p>Sunday 14:00, few clouds </br>   Humidity: <span class="identity">85%</span>, Wind: <span class="identity">4.63km/h</span></p>
         <div class="tempature"><div class="icon">🌤</div><div class="temp">15</div><div class="degree">°c</div></div>
       </main>
@@ -32,5 +33,6 @@
         coded by Fatremeh, is open-sourced on GitHub and hosted on Netlify
       </footer>
     </div>
+    <script src="src/script.js"></script>
   </body>
 </html>
