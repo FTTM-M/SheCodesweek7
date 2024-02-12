@@ -8,6 +8,7 @@
     <title>Weather</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Rubik&display=swap" rel="stylesheet">
   </head>
   <body>
@@ -27,7 +28,7 @@
       <main>
         <h1 id="fianal-city"><strong>Paris</strong></h1>
         <p>Sunday 14:00, few clouds </br>   Humidity: <span class="identity">85%</span>, Wind: <span class="identity">4.63km/h</span></p>
-        <div class="tempature"><div class="icon">🌤</div><div class="temp">15</div><div class="degree">°c</div></div>
+        <div class="tempature"><div class="icon">🌤</div><div class="temp" id="temp">15</div><div class="degree">°c</div></div>
       </main>
       <footer>
         coded by Fatremeh, is open-sourced on GitHub and hosted on Netlify
