@@ -1,15 +1,40 @@
+function formatDate(date) {
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  if (hours < 10) {
+    hours = "0" + hours;
+  }
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
+  return `${day} ${hours}:${minutes}`;
+}
 function getDegree(response) {
   let temperature = document.querySelector("#temp");
-  let fianalResponse = response.data.temperature.current;
-  let currentTemp = Math.round(fianalResponse);
+  let finalResponse = response.data.temperature.current;
+  let currentTemp = Math.round(finalResponse);
   let description = document.querySelector("#position");
   let humidity = document.querySelector("#humidity");
   let wind = document.querySelector("#wind");
+  let currentTime = document.querySelector("#time");
+  console.log(response.data);
+  let date = new Date(response.data.time * 1000);
 
   wind.innerHTML = response.data.wind.speed;
   humidity.innerHTML = response.data.temperature.humidity;
   description.innerHTML = response.data.condition.description;
   temperature.innerHTML = currentTemp;
+  currentTime.innerHTML = formatDate(date);
 }
 
 function callCity(city) {
