@@ -2,6 +2,13 @@ function getDegree(response) {
   let temperature = document.querySelector("#temp");
   let fianalResponse = response.data.temperature.current;
   let currentTemp = Math.round(fianalResponse);
+  let description = document.querySelector("#position");
+  let humidity = document.querySelector("#humidity");
+  let wind = document.querySelector("#wind");
+
+  wind.innerHTML = response.data.wind.speed;
+  humidity.innerHTML = response.data.temperature.humidity;
+  description.innerHTML = response.data.condition.description;
   temperature.innerHTML = currentTemp;
 }
 
@@ -17,10 +24,12 @@ function weather(event) {
   let cityInput = document.querySelector("#search-input");
   let cityValue = cityInput.value;
   let fianal = document.querySelector("#fianal-city");
+
   fianal.innerHTML = cityValue;
   callCity(cityValue);
 }
 
 let selectForm = document.querySelector("#form");
+
 selectForm.addEventListener("submit", weather);
 callCity("paris");
