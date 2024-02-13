@@ -52,22 +52,23 @@ footer {
   font-family: none;
 }
 p {
-  margin: 0px 0px 20px 20px;
+  margin: 0px 0px 50px 20px;
 }
 .tempature {
   display: flex;
-  margin: -120px 400px 0px;
+  margin: -160px 350px 0px;
 }
 .icon {
-  font-size: 42px;
-  margin-top: 3px;
+  width: 88px;
+  height: 88px;
+  margin-top: -13px;
 }
 .temp {
   font-size: 65px;
   font-weight: bold;
-  margin: 0px -5px 0px 5px;
+  margin: =50px 0px 0px 5px;
 }
 .degree {
   font-size: 30px;
-  margin: 0px -10px 0px 8px;
+  margin: 10px -10px 0px 8px;
 }

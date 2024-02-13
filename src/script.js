@@ -27,18 +27,19 @@ function getDegree(response) {
   let humidity = document.querySelector("#humidity");
   let wind = document.querySelector("#wind");
   let currentTime = document.querySelector("#time");
-  console.log(response.data);
   let date = new Date(response.data.time * 1000);
+  let iconUrl = document.querySelector("#icon");
 
   wind.innerHTML = response.data.wind.speed;
   humidity.innerHTML = response.data.temperature.humidity;
   description.innerHTML = response.data.condition.description;
   temperature.innerHTML = currentTemp;
   currentTime.innerHTML = formatDate(date);
+  iconUrl.innerHTML = `<img src="${response.data.condition.icon_url}"  class="weather-app-icon" />`;
 }
 
 function callCity(city) {
-  let apiKey = "7e0t14a370o3b9095a4ff16f06c1bee0";
+  let apiKey = "b2a5adcct04b33178913oc335f405433";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
 
   axios.get(apiUrl).then(getDegree);
